@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:900');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
+body{
+background-color: white;
+font-size: 14px;
+}
+  
+/* Navigation Menu - Background */
+.navigation {
+/* critical sizing and position styles */
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 0;
+
+/* non-critical appearance styles */
+list-style: none;
+background: white;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+/* non-critical appearance styles */
+width: 200px;
+border-top: 1px solid white;
+border-bottom: 1px solid white;
+}
+
+.nav-item a {
+/* non-critical appearance styles */
+display: block;
+padding: .5em;
+font-family: 'Raleway', sans-serif;
+background: white;
+color: black;
+font-size: 1.2em;
+text-decoration: none;
+transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+color: #black;
+background: #F5F5F5;
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+/* Critical position and size styles */
+min-height: 100%;
+min-width: 100%;
+position: relative;
+top: 0;
+bottom: 100%;
+left: 0;
+z-index: 1;
+}
+
+/* Nav Trigger */
+.nav-trigger {
+/* critical styles - hide the checkbox input */
+position: absolute;
+clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+/* critical positioning styles */
+position: fixed;
+left: 30px; top: 30px;
+z-index: 2;
+
+/* non-critical apperance styles */
+height: 30px;
+width: 30px;
+cursor: pointer;
+background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+}
+
+body {
+/* Without this, the body has excess horizontal scroll when the menu is open */
+overflow-x: hidden;
+}
+
+header {
+height: 200%;
+margin: 0 auto;
+background: url("https://natpera.github.io/unit_9/images/whiteheader.jpg");
+background-repeat: no-repeat;
+background-position: center;
+vertical-align: middle;
+background-color: seashell;
+padding-left: 25px;
+padding-top: 25px;
+}
+
+h1 {
+color: black;
+padding-top: 40px;
+font-family: 'Permanent Marker', cursive;
+text-align: center;
+font-size: 3.125em;
+font-weight: bold;
+}
+
+footer{
+background-color: white;
+text-align: left;
+color: gray;
+font-size: 10px;
+font-family: 'Vollkorn', serif;
+text-decoration: none;
+text-align: center;
+padding-top: 40px; 
+}
+
+.div{
+background color: white;
+}
+
+#second
+{
+font-family: 'Raleway', sans-serif;
+color: black;
+margin: 40px 0px 75px 0px;
+text-align: center;
+text-transform: uppercase;
+font-size: 100px;
+letter-spacing: .2em
+}
+
+#container {
+margin: 0 auto;
+width: 100%;
+background-color: #ffffff;
+}
+
+
+.section {
+clear: both;
+padding: 0px;
+margin: 0px;
+}
+
+.col {
+display: block;
+float:left;
+margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.6%;
+}
+.span_2_of_4 {
+  width: 49.2%;
+}
+.span_1_of_4 {
+  width: 23.8%;
+}
+
+div {
+background-color: white;
+}
+
+@media only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px)
+{ 
+.col {  margin: 1% 0 1% 0; }
+.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 {width: 100%;}
+}
+
+@media only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px)
+{ 
+#second {
+font-size: 30px;
+}
+
+}
+
+@media only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px)
+{ 
+#section1 {
+font-size: 22px;
+padding: 30px;
+}
+
+}
+
+
+
